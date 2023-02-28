@@ -22,6 +22,7 @@ main() {
   selectName();
   userInput();
   endGame();
+  print("Hi");
 }
 
 selectName() {
