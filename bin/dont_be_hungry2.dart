@@ -3,13 +3,14 @@ import 'dart:math';
 
 List<Monster> monsters = [
   Monster(name: "🧟‍♂️Zombie", health: 20),
-  Monster(name: "👻Ghost", health: 50, damage: 10)
+  Monster(name: "👻Ghost", health: 50, damage: 10),
+  Monster(name: "🦁Lion", damage: 30)
 ];
 
 List<Food> foods = [
-  Food("🍎", "Fruit", 10),
-  Food("🍖", "Meets", 50),
-  Food("🌊", "Drink", 5)
+  Food(name: "🍎", type: "Fruit"),
+  Food(name: "🍖", type: "Meets", treatment: 50),
+  Food(name: "🌊", type: "Drink", treatment: 5)
 ];
 
 var player1 = Player();
@@ -38,7 +39,7 @@ moveForward() {
       "name: ${player1.name}, health: ${player1.health}, score: ${player1.score}");
   var random = Random();
   int userLuck = random.nextInt(11);
-  
+
   if (userLuck == 10) {
     foods.shuffle();
     print(foods[0].name);
@@ -88,10 +89,8 @@ class Player extends Creature {
   @override
   hit(Creature creature) {
     // TODO: implement hit
-    creature.health -= damage * 2 ;
+    creature.health -= damage * 2;
     return super.hit(creature);
-    
-  
   }
 }
 
@@ -101,8 +100,6 @@ class Monster extends Creature {
     this.health = health;
     this.damage = damage;
   }
-
-  
 }
 
 class Food {
@@ -110,7 +107,7 @@ class Food {
   String type = "";
   int treatment = 10;
 
-  Food(String name, String type, int treatment) {
+  Food({required String name, required String type, int treatment = 10}) {
     this.name = name;
     this.type = type;
     this.treatment = treatment;
