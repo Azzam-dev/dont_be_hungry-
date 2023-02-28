@@ -8,9 +8,9 @@ List<Monster> monsters = [
 ];
 
 List<Food> foods = [
-  Food(name: "🍎", type: "Fruit"),
-  Food(name: "🍖", type: "Meets", treatment: 50),
-  Food(name: "🌊", type: "Drink", treatment: 5)
+  Food(name: "🍎💖", type: "Fruit"),
+  Food(name: "🍖👍", type: "Meets", treatment: 50),
+  Food(name: "🌊😘", type: "Drink", treatment: 5)
 ];
 
 var player1 = Player();
