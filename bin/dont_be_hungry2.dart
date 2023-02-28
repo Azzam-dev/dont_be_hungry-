@@ -4,25 +4,24 @@ import 'dart:math';
 List<Monster> monsters = [
   Monster(name: "🧟‍♂️Zombie", health: 20),
   Monster(name: "👻Ghost", health: 50, damage: 10),
-  Monster(name: "🦁Lion", damage: 30)
+  Monster(name: "🦁Lion", damage: 30),
+  Monster(name: "🐯Tiger", damage: 45),
+  Monster(name: "🐊Crocodile", damage: 10)
 ];
 
 List<Food> foods = [
-  Food(name: "🍎💖", type: "Fruit"),
-  Food(name: "🍖👍", type: "Meets", treatment: 50),
-  Food(name: "🌊😘", type: "Drink", treatment: 5),
-  Food(name: "🌊", type: "Vagtabels", treatment: 4)
+  Food(name: "🍎", type: "Fruit"),
+  Food(name: "🍖", type: "Meets", treatment: 50),
+  Food(name: "🌊", type: "Drink", treatment: 5)
 ];
 
 var player1 = Player();
 
 main() {
-  print("my ali");
   gameTitle();
   selectName();
   userInput();
   endGame();
-  print("Abdulmajeed");
 }
 
 selectName() {
