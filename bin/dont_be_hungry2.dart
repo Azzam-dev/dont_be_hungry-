@@ -16,6 +16,7 @@ List<Food> foods = [
 var player1 = Player();
 
 main() {
+  print("my ali");
   gameTitle();
   selectName();
   userInput();
